@@ -1,0 +1,28 @@
+LARYN IPHONE SOURCE PROJECT - START HERE
+
+This folder contains the source needed to build the iPhone app.
+The older website ZIP (index.html, sw.js, and icons only) cannot build an IPA.
+
+1. Extract this ZIP on Windows.
+2. Open your public GitHub repository, then Code > Add file > Upload files.
+3. Upload ALL the extracted contents to the repository root and commit to main.
+   Include .github, ios, src, public, scripts, package.json, and package-lock.json.
+   Do not upload the ZIP itself or an extra enclosing folder.
+4. In GitHub's Code tab, confirm package.json and ios are visible at the top level.
+   Also confirm .github/workflows/ios-build.yml exists.
+5. Open Actions > Build LARYN for iPhone > Run workflow.
+
+IF ACTIONS STILL SHOWS NO WORKFLOW
+
+The .github folder may have been missed during upload. In GitHub:
+  Code > Add file > Create new file
+Use this exact filename (including the folders):
+  .github/workflows/ios-build.yml
+Open LARYN-iPhone-workflow.txt from this ZIP in Notepad.
+Copy ALL its text into GitHub's file editor, then commit to the default branch.
+Refresh Actions. The text file at the repository root is only a copy; GitHub
+recognizes the .yml file in .github/workflows.
+
+The full Windows/AltStore installation guide is docs/ios-without-mac.md.
+The build uses a free standard cloud Mac runner in a PUBLIC repository.
+It produces an unsigned IPA for personal installation through AltStore Classic.

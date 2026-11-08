@@ -15,10 +15,28 @@
       content="LARYN AI — a speech assistance and swallowing monitoring prototype. Communication, connection, and a little more independence."
     />
     <title>LARYN AI — Your voice, supported.</title>
-    <script type="module" crossorigin src="/assets/index-Dv0rqWT9.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DtRrmTM4.css">
-  <link rel="manifest" href="/manifest.webmanifest"></head>
+    <link rel="stylesheet" href="/startup.css" />
+    <script src="/boot.js"></script>
+  </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="startup-card" data-laryn-startup>
+        <img src="/favicon.svg" alt="LARYN AI" />
+        <h1 id="startup-title">Opening LARYN AI…</h1>
+        <p id="startup-message">Loading your communication and care space.</p>
+        <p lang="th">กำลังเปิด LARYN AI กรุณารอสักครู่</p>
+        <noscript
+          ><p>
+            Enable JavaScript in your browser to use LARYN. กรุณาเปิด JavaScript ในเบราว์เซอร์
+          </p></noscript
+        >
+        <button id="startup-retry" type="button">Reload app / โหลดใหม่</button>
+        <details id="startup-diagnostics" hidden>
+          <summary>Error details to share</summary>
+          <pre id="startup-detail"></pre>
+        </details>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

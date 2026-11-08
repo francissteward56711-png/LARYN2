@@ -1,0 +1,54 @@
+{
+  "name": "laryn-ai",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "icons:generate": "node scripts/generate-icons.mjs",
+    "package:iphone": "npm run build && python3 scripts/package-web.py",
+    "test:pwa": "playwright test --config playwright.pwa.config.ts",
+    "build:native": "tsc -b && vite build --mode native",
+    "ios:sync": "npm run build:native && cap sync ios",
+    "ios:open": "cap open ios",
+    "test:native": "playwright test --config playwright.native.config.ts",
+    "package:ios": "python3 scripts/package-ios-source.py"
+  },
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/share": "^8.0.3",
+    "@fontsource/manrope": "^5.3.0",
+    "@fontsource/noto-sans-thai": "^5.3.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@capacitor/cli": "^8.6.0",
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^2.0.0",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
