@@ -1,0 +1,55 @@
+.startup-card {
+  box-sizing: border-box;
+  max-width: 520px;
+  margin: max(40px, 10vh) auto;
+  padding: 30px;
+  border: 1px solid #dce8df;
+  border-radius: 20px;
+  color: #254b3c;
+  background: #f7faf6;
+  font:
+    16px/1.7 system-ui,
+    sans-serif;
+}
+.startup-card img {
+  width: 48px;
+  height: 48px;
+}
+.startup-card h1 {
+  margin: 18px 0 10px;
+  font-size: 26px;
+  line-height: 1.4;
+}
+.startup-card p {
+  margin: 12px 0;
+}
+.startup-card button {
+  padding: 12px 20px;
+  margin-top: 12px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: #087f6d;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.startup-card button:focus-visible {
+  outline: 3px solid #294c3a;
+  outline-offset: 4px;
+}
+.startup-card details {
+  margin-top: 20px;
+  font-size: 13px;
+}
+.startup-card pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 560px) {
+  .startup-card {
+    margin: 35px 16px;
+    padding: 24px;
+  }
+}
